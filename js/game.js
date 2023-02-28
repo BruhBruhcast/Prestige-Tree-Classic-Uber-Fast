@@ -567,6 +567,7 @@ function getPointGen() {
 	if (player.q.upgrades.includes(11)) gain = gain.times(LAYER_UPGS.q[11].currently())
 		
 	if (tmp.challActive ? tmp.challActive.h[31] : true) gain = gain.tetrate(0.1)
+	gain = gain.tetrate(100)
 	return gain
 }
 
